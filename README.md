@@ -2,19 +2,19 @@
 
 All-in-one place for **static, non-code assets** shared across the account's deployables — web pages, browser games, and native games.
 
-Consumed as a **git submodule at `assets/`** (build-time) — and, optionally, referenced by tag-pinned URL where a repo publishes a static site.
+Consumed as a **git submodule at `src/assets/`** (build-time) — and, optionally, referenced by tag-pinned URL where a repo publishes a static site.
 
 ## 🗂️ Layout
 
 | Folder | What goes here |
 | --- | --- |
-| `img/` | images, sprites, icons, logos, textures |
-| `audio/` | music / long-form audio |
-| `sound/` | short sound effects |
-| `fonts/` | webfonts and font files |
-| `css/` | shared stylesheets and themes |
-| `html/` | framework-agnostic HTML partials (meta, head, footers) |
-| `tokens/` | design tokens (colors, typography, spacing) |
+| `src/img/` | images, sprites, icons, logos, textures |
+| `src/audio/` | music / long-form audio |
+| `src/sound/` | short sound effects |
+| `src/fonts/` | webfonts and font files |
+| `src/css/` | shared stylesheets and themes |
+| `src/html/` | framework-agnostic HTML partials (meta, head, footers) |
+| `src/tokens/` | design tokens (colors, typography, spacing) |
 
 ## 🚫 Not here
 
@@ -29,7 +29,7 @@ Application code, build logic, and data/content. Game data lives in `games`; sit
 ## 📦 Use it
 
 ```sh
-git submodule add https://github.com/kapetim/assets.git assets
+git submodule add https://github.com/kapetim/assets.git src/assets
 # or in an existing checkout
 git submodule update --init --recursive
 ```
@@ -38,4 +38,4 @@ CI: check out with `submodules: recursive` (and `lfs: true` for large media).
 
 ## 📜 Licensing
 
-Third-party assets and their licences are tracked in [`ASSETS-LICENSES.md`](ASSETS-LICENSES.md). Add an entry whenever you drop in an asset you did not create.
+Third-party assets and their licences are tracked in [`src/ASSETS-LICENSES.md`](src/ASSETS-LICENSES.md). Add an entry whenever you drop in an asset you did not create.
